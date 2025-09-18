@@ -33,9 +33,9 @@ Cada entrega foi registrada em uma branch específica, com relatório completo d
 
 | Sprint | Previsão de entrega | Status           | Histórico |
 |:--:|:----------:|:-------------------|:-------------------------------------------------:|
-| 01 | 20/09/2025 | 🚧 Em andamento    |  [ver relatório](#) |
-| 02 | 20/10/2025 | ⏳ Planejada        |  [ver relatório](#) | 
-| 03 | 20/11/2025 | ⏳ Planejada        |  [ver relatório](#) |
+| 01 | 02/10/2025 | 🚧 Em andamento    |  [ver relatório](#) |
+| 02 | 31/10/2025 | ⏳ Planejada        |  [ver relatório](#) | 
+| 03 | 18/11/2025 | ⏳ Planejada        |  [ver relatório](#) |
 
 <p>Repositórios do Projeto:</p>
 
