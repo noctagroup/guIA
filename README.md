@@ -61,20 +61,15 @@ Isso nos deu uma visão clara do andamento da sprint e ajudou a identificar garg
 
 - **FrontEnd**  
 
-
----
-
-→ [Voltar ao topo](#topo)    
     
-<span id="documentação">
-    
-## 📑 Entregas
 
+    
 Nesta sprint foram Entregues as seguintes Task's:  
 | REF | DATA | Status           | Colaborador |
 |:--:|:----------:|:-------------------|:-------------------------------------------------:|
 | F01 | 18/09/2025 | ✔️ Concluída      |  Otavio |
 
+<span id="documentação">
 
 📄 [Documentação da Sprint 01](https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing)  
 
