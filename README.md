@@ -1,7 +1,7 @@
 <span id="topo">
 <div align="center">
     
-![banner](img/banner.png)
+![banner](https://github.com/noctagroup/guIA/blob/main/imagens/banner.jpg)
 
 </div>
     
