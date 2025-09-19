@@ -23,6 +23,23 @@
 
 ---
 
+### 🏁 Entregas de Sprints
+Cada entrega foi registrada em uma branch específica, com relatório completo de desenvolvimento:  
+
+| Sprint | Previsão de entrega | Status           | Histórico |
+|:--:|:----------:|:-------------------|:-------------------------------------------------:|
+| 01 | 02/10/2025 | 🚧 Em andamento    |  [ver relatório](#) |
+| 02 | 31/10/2025 | ⏳ Planejada        |  [ver relatório](#) | 
+| 03 | 18/11/2025 | ⏳ Planejada        |  [ver relatório](#) |
+
+<p>Repositórios do Projeto:</p>
+
+| [FrontEnd](#)  | [BackEnd](#)  |
+|----------------|---------------|
+
+→ [Voltar ao topo](#topo)  
+
+
 <span id="Resumo do trabalho da equipe">
     
 ## :chart_with_upwards_trend: Resumo do trabalho da equipe
@@ -60,8 +77,6 @@ Isso nos deu uma visão clara do andamento da sprint e ajudou a identificar garg
 - **BackEnd**  
 
 - **FrontEnd**  
-
-    
 
     
 Nesta sprint foram Entregues as seguintes Task's:  
