@@ -25,6 +25,9 @@ dependencies {
     implementation("io.quarkiverse.langchain4j:quarkus-langchain4j-pgvector")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
+    implementation("io.quarkus:quarkus-hibernate-orm")
+    implementation("org.hibernate.orm:hibernate-vector:6.6.0.Final")
+    implementation("io.quarkus:quarkus-flyway")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }
