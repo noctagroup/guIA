@@ -33,7 +33,7 @@ Cada entrega foi registrada em uma branch específica, com relatório completo d
 
 | Sprint | Previsão de entrega | Status           | Histórico |
 |:--:|:----------:|:-------------------|:-------------------------------------------------:|
-| 01 | 02/10/2025 | 🚧 Em andamento    |  [ver relatório](https://github.com/noctagroup/guIA/edit/Sprint-01/README.md) |
+| 01 | 02/10/2025 | 🚧 Em andamento    |  [ver relatório](https://github.com/noctagroup/guIA/tree/Sprint-01) |
 | 02 | 31/10/2025 | ⏳ Planejada        |  [ver relatório](#) | 
 | 03 | 18/11/2025 | ⏳ Planejada        |  [ver relatório](#) |
 
