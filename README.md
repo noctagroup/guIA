@@ -50,16 +50,87 @@ Cada entrega foi registrada em uma branch específica, com relatório completo d
 
 ## 🎯 Backlogs, Épicos & User Stories
 
-###  Requisitos
-![banner](img/requisitos.png)
+### ✅ Requisitos Funcionais
+- RF01 – O sistema deve permitir que o usuário acesse como convidado sem necessidade de cadastro.  
+- RF02 – O sistema deve permitir login social via Google/Apple.  
+- RF03 – O sistema deve armazenar embeddings de textos em banco de dados com pgvector.  
+- RF04 – O sistema deve permitir perguntas em linguagem natural e retornar respostas.  
+- RF05 – O sistema deve ajustar tom/estilo das respostas de acordo com o personagem escolhido.  
+- RF06 – O sistema deve disponibilizar um avatar animado que interaja com o usuário.  
+- RF07 – O sistema deve oferecer acessibilidade em Libras e modo de alto contraste.  
+- RF08 – O sistema deve permitir favoritar eventos e enviar lembretes.  
+- RF09 – O sistema deve possibilitar que o usuário baixe ou exclua seus dados pessoais.  
 
-###  Épicos & User Stories
-![banner](img/userstories.png) 
+### ⚠️ Requisitos Não Funcionais
+- RNF01 – O sistema deve ser responsivo e acessível em dispositivos móveis.  
+- RNF02 – O backend deve ser implementado em **Quarkus Kotlin**.  
+- RNF03 – O frontend deve ser implementado em **React (Vite)**.  
+- RNF04 – O banco de dados deve ser **PostgreSQL** com extensão **pgvector**.  
+- RNF05 – O sistema deve usar **Ollama** para embeddings e geração de texto.  
+- RNF06 – O sistema deve seguir as diretrizes da **LGPD**.  
 
-###  Planejamento das Sprints
-![banner](img/sprints.png)
+---
 
-→ [Voltar ao topo](#topo)
+### 👤 Histórias de Usuários
+
+#### Épico A — Onboarding & Conta
+- **A1** – Como Participante, quero entrar como convidado para usar rápido sem cadastro.  
+- **A2** – Como Participante, quero login social (Google/Apple) para salvar preferências.  
+- **A3** – Como Participante, quero aceitar os termos da LGPD para continuar usando o app.  
+
+#### Épico B — Busca Semântica
+- **B1** – Como Participante, quero buscar em linguagem natural e receber resultados relevantes.  
+- **B2** – Como Participante, quero sugestões automáticas enquanto digito no campo de busca.  
+- **B3** – Como Organizador, quero relatórios de termos buscados para otimizar a sinalização.  
+
+#### Épico D — Acessibilidade
+- **D1** – Como Pessoa Surda, quero vídeos em Libras explicando como usar o app.  
+- **D2** – Como Participante, quero ativar alto contraste e fontes maiores para melhor leitura.  
+
+#### Épico F — Avatar Assistente
+- **F1** – Como Participante, quero um avatar interativo que responda por voz/texto e me ajude a navegar.  
+- **F2** – Como Participante, quero que o avatar lembre minhas preferências para personalizar a experiência.  
+
+#### Épico G — Agenda & Notificações
+- **G1** – Como Participante, quero favoritar palestras e receber lembretes.  
+- **G2** – Como Participante, quero notificações de alterações de local ou horário.  
+
+#### Épico H — Segurança & LGPD
+- **H1** – Como Usuário, quero poder baixar e excluir meus dados pessoais.  
+- **H2** – Como Sistema, quero criptografar dados em trânsito e em repouso.  
+
+#### Épico I — Administração & Analytics
+- **I1** – Como Organizador, quero visualizar um heatmap de circulação.  
+- **I2** – Como Organizador, quero um dashboard de satisfação (NPS).  
+
+---
+
+### 🗓️ Planejamento das Sprints
+
+#### Sprint 01 – Fundamentos & Base Técnica (01/09/2025 a 20/09/2025)
+- Estrutura mínima dos projetos (front + back).  
+- Configuração de `.env`.  
+- Integração inicial com **Ollama**.  
+- Habilitação do **pgvector**.  
+- Documentação inicial.  
+
+#### Sprint 02 – RAG & Primeiras Interações (21/09/2025 a 10/10/2025)
+- Endpoint **POST /subscribe** para cadastro de grupos e embeddings.  
+- Endpoint **POST /ask** para perguntas/respostas.  
+- Prompt tuning por personagem.  
+- Mock WebSocket para simulação de respostas e emoções.  
+
+#### Sprint 03 – Avatar & Experiência Avançada (11/10/2025 a 31/10/2025)
+- Core de emoção no backend e frontend.  
+- UI de seleção de personagem.  
+- Sprites dos personagens.  
+- Favoritar eventos e lembretes.  
+- Funcionalidades de acessibilidade (Libras e alto contraste).  
+- Segurança e LGPD (baixar/excluir dados).  
+- Dashboard inicial para organizadores.  
+
+→ [Voltar ao topo](#topo)  
+
 
 ---
 
