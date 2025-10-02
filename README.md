@@ -83,6 +83,14 @@ Nesta sprint foram Entregues as seguintes Task's:
 | REF | DATA | Status           | Colaborador |
 |:--:|:----------:|:-------------------|:-------------------------------------------------:|
 | F01 | 18/09/2025 | ✔️ Concluída      |  Otavio |
+| F02 | 22/09/2025 | ✔️ Concluída      |  Otavio |
+| F03 | 22/10/2025 | ✔️ Concluída      |  Otavio |
+| F04 | 22/10/2025 | ✔️ Concluída      |  Otavio |
+| F05 | 24/10/2025 | ✔️ Concluída      |  Otavio |
+| F11 | 29/09/2025 | ✔️ Concluída      |  Flavio |
+| F13 | 02/10/2025 | ✔️ Concluída      |  Flavio |
+
+
 
 <span id="documentação">
 
