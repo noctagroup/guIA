@@ -88,8 +88,9 @@ Nesta sprint foram Entregues as seguintes Task's:
 | F04 | 22/10/2025 | ✔️ Concluída      |  Otavio |
 | F05 | 24/10/2025 | ✔️ Concluída      |  Otavio |
 | F11 | 29/09/2025 | ✔️ Concluída      |  Flavio |
+| F12 | 02/10/2025 | ✔️ Concluída      |  Betariz |
 | F13 | 02/10/2025 | ✔️ Concluída      |  Flavio |
-
+| F16 | 02/10/2025 | ✔️ Concluída      |  Betariz |
 
 
 <span id="documentação">
