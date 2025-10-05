@@ -19,12 +19,18 @@ public class AIService {
 
     private final WebClient webClient;
     private final ObjectMapper objectMapper;
-    private static final String MODELO_EMBEDDING = "nomic-embed-text";
-    private static final String MODELO_GERACAO = "phi3:mini";
+    private final String modeloEmbedding;
+    private final String modeloGeracao;
 
-    public AIService(@Value("${ollama.api.base-url}") String baseUrl) {
+    public AIService(
+            @Value("${ollama.api.base-url}") String baseUrl,
+            @Value("${ollama.model.embedding}") String modeloEmbedding,
+            @Value("${ollama.model.generation}") String modeloGeracao
+    ) {
         this.webClient = WebClient.builder().baseUrl(baseUrl).build();
         this.objectMapper = new ObjectMapper();
+        this.modeloEmbedding = modeloEmbedding;
+        this.modeloGeracao = modeloGeracao;
     }
 
     /**
@@ -35,7 +41,7 @@ public class AIService {
      * @return Um array de float representando o embedding do texto.
      */
     public float[] getEmbedding(String text) {
-        OllamaEmbeddingRequest request = new OllamaEmbeddingRequest(MODELO_EMBEDDING, text);
+        OllamaEmbeddingRequest request = new OllamaEmbeddingRequest(this.modeloEmbedding, text);
 
         OllamaEmbeddingResponse response = webClient.post()
                 .uri("/api/embeddings")
@@ -54,7 +60,7 @@ public class AIService {
      * @return Um Flux<String> com os chunks de texto gerados.
      */
     public Flux<String> streamGenerateResponse(String prompt) {
-        OllamaGenerationRequest request = new OllamaGenerationRequest(MODELO_GERACAO, prompt, true);
+        OllamaGenerationRequest request = new OllamaGenerationRequest(this.modeloGeracao, prompt, true);
 
         return webClient.post() // Usa WebClient
                 .uri("/api/generate")
