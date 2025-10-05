@@ -45,7 +45,7 @@ public class RagWebSocketHandler extends TextWebSocketHandler {
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        session.sendMessage(new TextMessage("Conexão estabelecida."));
+        session.sendMessage(new TextMessage("Olá serei o seu guIA. O que deseja ver hoje?"));
     }
 
     private void ask(String query, WebSocketSession session) {
@@ -65,14 +65,25 @@ public class RagWebSocketHandler extends TextWebSocketHandler {
 
             // 3. Montar o prompt final para o modelo de linguagem
             String finalPrompt = String.format("""
-                       Você é um assistente prestativo, está aqui para ajudar pessoas a acharem projetos pelas quais se interessam em um evento. Use o seguinte contexto para responder à pergunta do usuário.
-                       Se a resposta não estiver no contexto, diga que você não sabe. Lembre-se de dizer a localização sempre e uma breve descrição caso exista no contexto.
+                        Você é um assistente de eventos focado em projetos. Sua tarefa é responder à pergunta do usuário **APENAS** usando o CONTEXTO fornecido, mantendo o tom prestativo e a resposta o mais **direta** possível. Não é necessário realizar saudações.
                     
-                       Contexto:
-                       %s
+                        **REGRAS DE RESPOSTA:**
                     
-                       Pergunta do Usuário:
-                       %s
+                        1.  **Relevância Direta (Melhor correspondência):** Se o CONTEXTO contiver a informação pedida, responda diretamente à pergunta. **Obrigatório:** Inclua sempre a **localização** e, se disponível, a **breve descrição** do projeto.
+                    
+                        2.  **Relevância Parcial (Ligeiramente fora):** Se o CONTEXTO não tiver exatamente o que foi pedido, mas contiver algo **muito semelhante** ou **relacionado** (ex: perguntou sobre "Robótica em Python" e o contexto tem "Projetos de Automação com Python"), indique que não tem o item exato, mas sugira o projeto similar, citando sua **localização** e **descrição**.
+                    
+                        3.  **Sem Relevância (Completamente fora):** Se o CONTEXTO não tiver qualquer informação útil ou relacionada à pergunta, responda de forma concisa que a informação está **completamente fora** do contexto disponível. Não invente a resposta.
+                    
+                        ---
+                    
+                        CONTEXTO:
+                        %s
+                    
+                        PERGUNTA DO USUÁRIO:
+                        %s
+                    
+                        RESPOSTA:
                     """, context, query);
 
             // 4. Chamar o serviço de IA para obter a resposta em stream e enviá-la via WebSocket
