@@ -1,75 +1,207 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import React, { useRef, useEffect, useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  FlatList,
+  Image,
+  TextInput,
+  Animated,
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+const personagens = [
+  {
+    id: "1",
+    nome: "Mago",
+    imagem: "https://cdn-icons-png.flaticon.com/512/4359/4359963.png",
+  },
+  {
+    id: "2",
+    nome: "Guerreiro",
+    imagem: "https://cdn-icons-png.flaticon.com/512/3048/3048122.png",
+  },
+  {
+    id: "3",
+    nome: "Curandeiro",
+    imagem: "https://cdn-icons-png.flaticon.com/512/1995/1995543.png",
+  },
+];
 
-export default function HomeScreen() {
+export default function ChatScreen() {
+  const [personagemSelecionado, setPersonagemSelecionado] = useState<
+    string | null
+  >(null);
+  const [mensagem, setMensagem] = useState("");
+
+  // animação de gradiente
+  const animatedValue = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(animatedValue, {
+          toValue: 1,
+          duration: 4000,
+          useNativeDriver: false,
+        }),
+        Animated.timing(animatedValue, {
+          toValue: 0,
+          duration: 4000,
+          useNativeDriver: false,
+        }),
+      ])
+    ).start();
+  }, [animatedValue]);
+
+  const bgColor1 = animatedValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ["#0f2027", "#2c5364"],
+  });
+
+  const bgColor2 = animatedValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ["#203a43", "#1c1c1c"],
+  });
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+    <Animated.View style={{ flex: 1 }}>
+      <LinearGradient
+        colors={[bgColor1 as any, bgColor2 as any]}
+        style={StyleSheet.absoluteFill}
+      />
+
+      {/* Header */}
+      <View style={styles.header}>
+        {personagemSelecionado && (
+          <TouchableOpacity
+            onPress={() => setPersonagemSelecionado(null)}
+            style={styles.backButton}
+          >
+            <Text style={styles.backText}>◀</Text>
+          </TouchableOpacity>
+        )}
+        <Text style={styles.headerText}>
+          {personagemSelecionado
+            ? `Conversando com ${personagemSelecionado}`
+            : "Escolha um personagem"}
+        </Text>
+      </View>
+
+      {/* Cards de seleção */}
+      {!personagemSelecionado ? (
+        <FlatList
+          data={personagens}
+          keyExtractor={(item) => item.id}
+          numColumns={2}
+          contentContainerStyle={styles.cardList}
+          columnWrapperStyle={{ justifyContent: "space-between" }}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              style={styles.card}
+              onPress={() => setPersonagemSelecionado(item.nome)}
+            >
+              <Image source={{ uri: item.imagem }} style={styles.cardImage} />
+              <Text style={styles.cardTitle}>{item.nome}</Text>
+            </TouchableOpacity>
+          )}
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      ) : (
+        <View style={styles.chatArea}>
+          <Text style={styles.chatPlaceholder}>Área de mensagens...</Text>
+        </View>
+      )}
+
+      {/* Input fixo embaixo */}
+      {personagemSelecionado && (
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Digite sua mensagem..."
+            placeholderTextColor="#888"
+            value={mensagem}
+            onChangeText={setMensagem}
+          />
+        </View>
+      )}
+    </Animated.View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  header: {
+    backgroundColor: "rgba(30,30,30,0.8)",
+    padding: 16,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    flexDirection: "row",
+    alignItems: "center",
   },
-  stepContainer: {
-    gap: 8,
+  headerText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
+    flex: 1,
+    textAlign: "center",
+  },
+  backButton: {
+    position: "absolute",
+    left: 16,
+    top: "50%",
+    transform: [{ translateY: -10 }],
+    zIndex: 10,
+  },
+  backText: {
+    color: "#fff",
+    fontSize: 18,
+  },
+  cardList: {
+    padding: 16,
+  },
+  card: {
+    backgroundColor: "rgba(31,31,31,0.8)",
+    width: "48%",
+    aspectRatio: 1,
+    borderRadius: 12,
+    marginBottom: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#333",
+  },
+  cardImage: {
+    width: 60,
+    height: 60,
     marginBottom: 8,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  cardTitle: {
+    color: "#fff",
+    fontSize: 14,
+    fontWeight: "bold",
+  },
+  chatArea: {
+    flex: 1,
+    padding: 16,
+  },
+  chatPlaceholder: {
+    color: "#ccc",
+    textAlign: "center",
+    marginTop: 20,
+  },
+  inputContainer: {
+    flexDirection: "row",
+    backgroundColor: "rgba(30,30,30,0.8)",
+    padding: 10,
+    borderTopWidth: 1,
+    borderTopColor: "#333",
+  },
+  input: {
+    flex: 1,
+    backgroundColor: "#2A2A2A",
+    color: "#fff",
+    borderRadius: 20,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
   },
 });
