@@ -80,17 +80,18 @@ Isso nos deu uma visão clara do andamento da sprint e ajudou a identificar garg
 
     
 Nesta sprint foram Entregues as seguintes Task's:  
-| REF | DATA | Status           | Colaborador |
+| REF | DATA | Status           | 
 |:--:|:----------:|:-------------------|:-------------------------------------------------:|
-| F01 | 18/09/2025 | ✔️ Concluída      |  Otavio |
-| F02 | 22/09/2025 | ✔️ Concluída      |  Otavio |
-| F03 | 22/10/2025 | ✔️ Concluída      |  Otavio |
-| F04 | 22/10/2025 | ✔️ Concluída      |  Otavio |
-| F05 | 24/10/2025 | ✔️ Concluída      |  Otavio |
-| F11 | 29/09/2025 | ✔️ Concluída      |  Flavio |
-| F12 | 02/10/2025 | ✔️ Concluída      |  Betariz |
-| F13 | 02/10/2025 | ✔️ Concluída      |  Flavio |
-| F16 | 02/10/2025 | ✔️ Concluída      |  Betariz |
+| LAB-001 – Documentação inicial – 2 pts Estruturar repositório e instruções de execução local. | 18/09/2025 | ✔️ Concluída      |  
+| PLN-001 – Integração com Ollama – 3 pts Funções para embed e geração via API Ollama. | 22/09/2025 | ✔️ Concluída      | 
+| LAB-002 – Habilitar pgvector – 3 pts Criar coluna embedding vector(768 1024) na tabela de chunks. | 22/10/2025 | ✔️ Concluída      | 
+| LAB-003– Sprites personagem 1 – 12 pts Animações: idle, feliz, dúvida, frustrado, saudações. | 22/10/2025 | ✔️ Concluída      | 
+|LAB-004 – Configuração .env simples – 1 pt Arquivo .env com variáveis (DB_URL, OLLAMA_BASE, EMBED_MODEL, GEN_MODEL). | 24/10/2025 | ✔️ Concluída      |
+| LAB-005[<Cod. Mat>-F01] : Estrutura mínima dos projetos (front + back) – 5 ptsFrontend React (Vite) e Backend Quarkus Kotlin sobem localmente. | 26/09/2025 | ✔️ Concluída      |  
+| LAB-006 FD - F11 – Core emoção front – 8 pts Mapeia emoção → sprite em tempo real. | 02/10/2025 | ✔️ Concluída      |  
+| PLN-002 F07 – POST /ask – 5 pts Recebe {pergunta, personagem} e retorna resposta. | 02/10/2025 | ✔️ Concluída      | 
+| LAB-007 F06 – POST /subscribe – 12 pts Recebe dados do grupo, gera embedding, salva em chunks e insere no banco. | 02/10/2025 | ✔️ Concluída      | 
+
 
 
 <span id="documentação">
