@@ -7,6 +7,6 @@ public record LocalizacaoDTO(
         @Min(value = 0, message = "Andar deve ser no mínimo 0")
         @Max(value = 3, message = "Andar deve ser no máximo 3")
         int andar,
-        int sala
+        String sala
 ) {
 }

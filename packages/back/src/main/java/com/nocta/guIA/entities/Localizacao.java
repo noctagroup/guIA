@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Localizacao {
     private int andar;
-    private int sala;
+    private String sala;
 }

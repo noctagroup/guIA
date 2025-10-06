@@ -42,7 +42,7 @@ const personagens = [
   },
 ];
 
-const WS_URL = "ws://localhost:8080/ask";
+const WS_URL = "ws://guia.nocta-software-dsm.com/ask";
 
 // --- NOVO COMPONENTE: Indicador de Digitação (Loading) ---
 const TypingIndicator = () => {
