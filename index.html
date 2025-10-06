@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Personagem Falando</title>
+  <style>
+    #personagem {
+      width: 200px; /* ajuste o tamanho conforme necessário */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img id="personagem" src="fechado.png" alt="Personagem">
+  </div>
+  
+  <p id="fala">
+    Bem-vindo à minha página! Aqui você vai conhecer mais sobre o projeto...
+  </p>
+
+  <script>
+    const personagem = document.getElementById("personagem");
+    const imagens = ["fechado.png", "aberto.png"];
+    let index = 0;
+    let intervalo;
+
+    // Função para alternar as imagens
+    function falar() {
+      intervalo = setInterval(() => {
+        index = (index + 1) % imagens.length;
+        personagem.src = imagens[index];
+      }, 300); // alterna a cada 300ms
+    }
+
+    // Função para parar
+    function parar() {
+      clearInterval(intervalo);
+      personagem.src = "boca_fechada.png";
+    }
+
+    // Exemplo: começa a "falar" quando a página carrega
+    window.onload = () => {
+      falar();
+      // Para depois de 5 segundos (simulando fim da fala)
+      setTimeout(parar, 5000);
+    };
+  </script>
+</body>
+</html>

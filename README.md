@@ -1,5 +1,10 @@
 <span id="topo">
 
+<div align="center">
+    
+![banner](https://github.com/noctagroup/guIA/blob/main/imagens/banner.jpg)
+
+
 <h1 align="center">Sprint 1: 01/09/2025 a 20/09/2025</h1>
 
 <p align="center">
