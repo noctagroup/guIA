@@ -1,30 +1,30 @@
 <span id="topo">
+
 <div align="center">
     
 ![banner](https://github.com/noctagroup/guIA/blob/main/imagens/banner.jpg)
 
-</div>
-    
+
+<h1 align="center">Sprint 1: 01/09/2025 a 20/09/2025</h1>
+
 <p align="center">
-    <a href="#sobre">Sobre</a>  |  
-    <a href="#backlogs">Backlogs</a>  |  
-    <a href="#tecnologias">Tecnologias</a>  |  
-    <a href="#equipe">Equipe</a>
-</p>    
+    <a href="#objetivos">Objetivos da sprint</a> &nbsp |&nbsp &nbsp
+    <a href="#Resumo do trabalho da equipe">Resumo do trabalho da equipe</a> &nbsp |&nbsp &nbsp
+    <a href="#entregas">Entregas</a> &nbsp |&nbsp &nbsp
+    <a href="#documentação">Análise de requisitos</a>
+</p>
 
 ---
 
-<span id="sobre">
+<span id="objetivos">
     
-## 📑 Sobre o projeto
+## :dart: Objetivos da Sprint
 
-O **guIA** é um aplicativo mobile inteligente para **eventos**, que combina **Inteligência Artificial, Realidade Aumentada e IoT** para melhorar a experiência de participantes e organizadores.  
-
-Com ele, os usuários podem **navegar em mapas interativos**, contar com um **avatar digital assistente**, **receber notificações contextuais** e ainda ter acesso a recursos de **acessibilidade**, como suporte em Libras e ajustes visuais.  
-
-> _Projeto baseado na metodologia ágil **SCRUM**, buscando desenvolver Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos._  
-
-📌 **Status do Projeto:** Em andamento 🚧  
+- Criar estrutura mínima dos projetos (Frontend React + Backend Quarkus Kotlin)  
+- Configuração simples de variáveis de ambiente (.env)  
+- Habilitar extensão **pgvector** no PostgreSQL  
+- Integração inicial com **Ollama** para embeddings e geração  
+- Produzir documentação inicial do projeto  
 
 ---
 
@@ -44,55 +44,64 @@ Cada entrega foi registrada em uma branch específica, com relatório completo d
 
 → [Voltar ao topo](#topo)  
 
+
+<span id="Resumo do trabalho da equipe">
+    
+## :chart_with_upwards_trend: Resumo do trabalho da equipe
+
+- Utilizamos o **Kanban** como ferramenta de gestão de tarefas.  
+
+<img src="img/kanban.jpg" /> 
+
+- Nos cartões do Kanban, foram registradas informações como:  
+  - Nome do responsável  
+  - Descrição detalhada da atividade  
+  - DoD (Definition of Done) e DoR (Definition of Ready)  
+  - Comentários do Product Owner após revisão  
+
+<img src="img/card.jpg" /> 
+
+- Também empregamos o **gráfico de burndown** como ferramenta de gestão temporal das entregas.  
+Isso nos deu uma visão clara do andamento da sprint e ajudou a identificar gargalos antecipadamente.  
+
+<img src="img/burndown.jpg" /> 
+
 ---
-
-<span id="backlogs">
-
-## 🎯 Backlogs, Épicos & User Stories
-
-###  Requisitos
-![banner](img/requisitos.png)
-
-###  Épicos & User Stories
-![banner](img/userstories.png) 
-
-###  Planejamento das Sprints
-![banner](img/sprints.png)
 
 → [Voltar ao topo](#topo)
-
----
-
-<span id="tecnologias">
-
-## 🛠️ Tecnologias
-
-As seguintes ferramentas, linguagens e bibliotecas foram usadas na construção do projeto:  
-
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Kotlin](https://img.shields.io/badge/Kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-![Quarkus](https://img.shields.io/badge/Quarkus-4695EB?style=for-the-badge&logo=quarkus&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-%23000000.svg?style=for-the-badge&logoColor=white)
-![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=for-the-badge&logo=websocket&logoColor=white)
-![AR.js](https://img.shields.io/badge/AR.js-%23FF9900.svg?style=for-the-badge&logoColor=white)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-
-→ [Voltar ao topo](#topo)  
-
----
-
-<span id="equipe">
-
- ## 👥 Equipe  
     
-|    Função     | Nome                                  | LinkedIn & GitHub |
-| :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|  Scrum Master   | Otavio Lucas Abreu | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/o-abreu/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/otavioabreu27) |
-|  Product Owner  | Flavio Eduardo Linguanotto | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/flavio-linguanotto-b587361a4/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/linguanotto) |
-| Dev Team | Beatriz Roberto Montanini | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](#) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](#) |
+<span id="entregas">
+        
+## :rocket: Entregas
 
-→ [Voltar ao topo](#topo)  
+🎥 Demonstração da Sprint Review:  
+
+<a href="https://www.youtube.com/watch?v=XXXXXXXXXXX"><strong>Assista o vídeo da sprint review clicando aqui</strong></a>  
+
+📦 Repositórios:  
+- **BackEnd**  
+
+- **FrontEnd**  
+
+    
+Nesta sprint foram Entregues as seguintes Task's:  
+| REF | DATA | Status           | Colaborador |
+|:--:|:----------:|:-------------------|:-------------------------------------------------:|
+| F01 | 18/09/2025 | ✔️ Concluída      |  Otavio |
+| F02 | 22/09/2025 | ✔️ Concluída      |  Otavio |
+| F03 | 22/10/2025 | ✔️ Concluída      |  Otavio |
+| F04 | 22/10/2025 | ✔️ Concluída      |  Otavio |
+| F05 | 24/10/2025 | ✔️ Concluída      |  Otavio |
+| F11 | 29/09/2025 | ✔️ Concluída      |  Flavio |
+| F12 | 02/10/2025 | ✔️ Concluída      |  Betariz |
+| F13 | 02/10/2025 | ✔️ Concluída      |  Flavio |
+| F16 | 02/10/2025 | ✔️ Concluída      |  Betariz |
+
+
+<span id="documentação">
+
+📄 [Documentação da Sprint 01](https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing)  
 
 ---
+
+→ [Voltar ao topo](#topo)
