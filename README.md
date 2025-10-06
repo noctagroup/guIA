@@ -81,7 +81,7 @@ Isso nos deu uma visão clara do andamento da sprint e ajudou a identificar garg
     
 Nesta sprint foram Entregues as seguintes Task's:  
 | REF | DATA | Status           | 
-|:--:|:----------:|:-------------------|:-------------------------------------------------:|
+|:--:|:----------:|:-------------------|
 | LAB-001 – Documentação inicial – 2 pts Estruturar repositório e instruções de execução local. | 18/09/2025 | ✔️ Concluída      |  
 | PLN-001 – Integração com Ollama – 3 pts Funções para embed e geração via API Ollama. | 22/09/2025 | ✔️ Concluída      | 
 | LAB-002 – Habilitar pgvector – 3 pts Criar coluna embedding vector(768 1024) na tabela de chunks. | 22/10/2025 | ✔️ Concluída      | 
